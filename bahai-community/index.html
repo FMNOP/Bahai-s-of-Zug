@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official Zug Bahá'í Community website. Discover local beliefs in unity, children's classes, youth groups, and community event calendar in Canton Zug.">
+  <title data-tr="page_title">Bahá'ís of Zug | Building Unity & Community</title>
+  
+  <!-- Preconnect and Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Admin Control Banner (Hidden by default) -->
+  <div id="admin-banner" class="admin-banner hidden">
+    <span data-tr="admin_logged_banner">Logged in as Admin (Canton Zug Portal)</span>
+    <button id="admin-logout-btn" class="btn-logout" data-tr="logout_btn">Logout</button>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" class="scroll-progress-bar"></div>
+
+  <!-- Background Decorative Shapes Wrapper -->
+  <div class="bg-decor-wrapper">
+    <div class="decor-shape shape-1"></div>
+    <div class="decor-shape shape-2"></div>
+    <div class="decor-shape shape-3"></div>
+  </div>
+
+  <!-- Header Section -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#" class="logo">
+        <span class="logo-symbol">🕊️</span>
+        <span class="logo-text" data-tr="logo_text">BAHÁ'ÍS OF ZUG</span>
+        <span id="admin-nav-badge" class="admin-badge-nav hidden">Admin</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#beliefs" class="nav-link" data-tr="nav_beliefs">Beliefs</a>
+        <a href="#activities" class="nav-link" data-tr="nav_activities">Activities</a>
+        <a href="#calendar" class="nav-link" data-tr="nav_calendar">Calendar</a>
+        <a href="#virtues" class="nav-link" data-tr="nav_virtues">Virtues Card</a>
+        <a href="#history" class="nav-link" data-tr="nav_history">History</a>
+        <a href="#contact" class="nav-link btn-mobile-cta" data-tr="nav_contact_mobile">Get in Touch</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Language Selector -->
+        <div class="lang-selector">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="de">DE</button>
+        </div>
+
+        <a href="#contact" class="btn btn-primary btn-header" data-tr="nav_contact">Get in Touch</a>
+        
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Quote Rotator Section -->
+    <section class="hero-section" id="home">
+      <div class="hero-bg-overlay"></div>
+      
+      <!-- Elegant Golden Floral Background Mandala -->
+      <div class="floral-svg svg-hero-tr">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" stroke="var(--color-primary)" stroke-opacity="0.6" stroke-width="1.5"/>
+          <circle cx="50" cy="50" r="30" stroke="var(--color-primary)" stroke-opacity="0.7" stroke-dasharray="2 2" stroke-width="1.5"/>
+          <path d="M50,8 L61.7,35.6 L91.3,31.7 L72.2,54.7 L86.8,80.6 L57.5,74.1 L42.5,99 L37.8,69.7 L8.7,78.3 L27.8,55.3 L13.2,29.4 L42.5,35.9 Z" stroke="var(--color-primary)" stroke-opacity="0.7" stroke-width="1.5"/>
+          <path d="M50,50 Q65,20 80,35 Q65,50 50,50" stroke="var(--color-secondary)" stroke-opacity="0.6" stroke-width="1"/>
+          <path d="M50,50 Q35,20 20,35 Q35,50 50,50" stroke="var(--color-secondary)" stroke-opacity="0.6" stroke-width="1"/>
+          <path d="M50,50 Q75,70 65,90 Q55,70 50,50" stroke="var(--color-secondary)" stroke-opacity="0.6" stroke-width="1"/>
+          <path d="M50,50 Q25,70 35,90 Q45,70 50,50" stroke="var(--color-secondary)" stroke-opacity="0.6" stroke-width="1"/>
+        </svg>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="hero-pretitle" data-tr="hero_pretitle">Welcome to the Zug Bahá'í Community</span>
+          
+          <!-- Quote Rotator Container -->
+          <div class="quote-rotator">
+            <div class="quote-slide active">
+              <p class="quote-text" data-tr="hero_quote_1">"The Earth is but one country, and mankind its citizens."</p>
+              <span class="quote-author" data-tr="hero_quote_author_1">— Bahá'u'lláh</span>
+            </div>
+            <div class="quote-slide">
+              <p class="quote-text" data-tr="hero_quote_2">"Regard man as a mine rich in gems of inestimable value. Education can, alone, cause it to reveal its treasures..."</p>
+              <span class="quote-author" data-tr="hero_quote_author_2">— Bahá'u'lláh</span>
+            </div>
+            <div class="quote-slide">
+              <p class="quote-text" data-tr="hero_quote_3">"Lay the foundation of love and unity, for this is the source of all spiritual growth."</p>
+              <span class="quote-author" data-tr="hero_quote_author_3">— 'Abdu'l-Bahá</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#activities" class="btn btn-primary btn-lg" data-tr="hero_btn_explore">Explore Activities</a>
+            <a href="#calendar" class="btn btn-secondary btn-lg" data-tr="hero_btn_calendar">Community Calendar</a>
+          </div>
+        </div>
+      </div>
+      <div class="section-divider-curve">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="var(--color-bg-alt)"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Core Beliefs Section -->
+    <section class="beliefs-section" id="beliefs">
+      <!-- Subtle Floating Leaves SVG -->
+      <div class="floral-svg svg-beliefs-bl">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10,80 Q30,50 50,60 T90,30" stroke="var(--color-primary)" stroke-opacity="0.6" stroke-width="1.5"/>
+          <path d="M15,75 C25,65 35,65 45,75" stroke="var(--color-secondary)" stroke-opacity="0.5" stroke-width="1.25"/>
+          <path d="M50,55 C60,45 70,45 80,55" stroke="var(--color-secondary)" stroke-opacity="0.5" stroke-width="1.25"/>
+        </svg>
+      </div>
+
+      <div class="container">
+        <div class="section-header align-center">
+          <span class="section-badge" data-tr="beliefs_badge">Core Principles</span>
+          <h2 class="section-title text-serif" data-tr="beliefs_title">Inspiring the build of a better world.</h2>
+          <p class="section-subtitle" data-tr="beliefs_subtitle">The teachings of the Bahá'í Faith inspire individuals and families in Zug to contribute to the spiritual and material progress of society.</p>
+        </div>
+
+        <div class="beliefs-grid">
+          <!-- Principle 1 -->
+          <div class="belief-card scroll-reveal">
+            <div class="belief-icon color-1">🎨</div>
+            <h3 class="belief-title text-serif" data-tr="principle_title_1">Unity in Diversity</h3>
+            <p class="belief-description" data-tr="principle_desc_1">Just as flowers of different colors make a garden beautiful, the diversity of the human family makes our world richer. We believe in overcoming prejudices of all kinds.</p>
+          </div>
+
+          <!-- Principle 2 -->
+          <div class="belief-card scroll-reveal">
+            <div class="belief-icon color-2">💡</div>
+            <h3 class="belief-title text-serif" data-tr="principle_title_2">Search for Truth</h3>
+            <p class="belief-description" data-tr="principle_desc_2">We believe in the harmony of science and religion. Science helps us understand how things work, while religion guides us on how to act with love, kindness, and justice.</p>
+          </div>
+
+          <!-- Principle 3 -->
+          <div class="belief-card scroll-reveal">
+            <div class="belief-icon color-3">🌱</div>
+            <h3 class="belief-title text-serif" data-tr="principle_title_3">Inherent Nobility</h3>
+            <p class="belief-description" data-tr="principle_desc_3">Every human being is born with beautiful qualities inside—like kindness, courage, and truthfulness. Education is the key that unlocks these hidden gems.</p>
+          </div>
+        </div>
+
+        <!-- Oneness Info Callout -->
+        <div class="oneness-callout scroll-reveal">
+          <div class="callout-content">
+            <h4 class="callout-title text-serif" data-tr="callout_title">"The earth is but one country..."</h4>
+            <p data-tr="callout_desc">Bahá'í beliefs address essential themes such as the oneness of God and religion, the oneness of humanity, the progressive unfolding of religious truth, the equality of women and men, the centrality of justice, and the importance of education for children worldwide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Elegant Gold Floral Vine Divider -->
+    <div class="floral-divider scroll-reveal">
+      <svg viewBox="0 0 100 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10,5 Q30,2 50,5 T90,5" stroke="var(--color-primary)" stroke-opacity="0.5" stroke-width="1.5"/>
+        <path d="M50,5 C47,2 44,2 42,5 C44,8 47,8 50,5" stroke="var(--color-secondary)" stroke-opacity="0.5" stroke-width="1.25"/>
+        <path d="M50,5 C53,2 56,2 58,5 C56,8 53,8 50,5" stroke="var(--color-secondary)" stroke-opacity="0.5" stroke-width="1.25"/>
+      </svg>
+    </div>
+
+    <!-- Activities Section (Friendly focus) -->
+    <section class="activities-section" id="activities">
+      <!-- Subtle Background Floral Stem for Activities Section -->
+      <div class="floral-svg svg-activities-tr">
+        <svg viewBox="0 0 100 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50,10 Q50,100 50,190" stroke="var(--color-primary)" stroke-opacity="0.6" stroke-width="1.5"/>
+          <path d="M50,40 Q70,30 65,15 Q55,25 50,40" stroke="var(--color-secondary)" stroke-opacity="0.5" stroke-width="1.25"/>
+          <path d="M50,70 Q30,60 35,45 Q45,55 50,70" stroke="var(--color-secondary)" stroke-opacity="0.5" stroke-width="1.25"/>
+          <path d="M50,100 Q70,90 65,75 Q55,85 50,100" stroke="var(--color-secondary)" stroke-opacity="0.5" stroke-width="1.25"/>
+          <path d="M50,130 Q30,120 35,105 Q45,115 50,130" stroke="var(--color-secondary)" stroke-opacity="0.5" stroke-width="1.25"/>
+          <path d="M50,160 Q70,150 65,135 Q55,145 50,160" stroke="var(--color-secondary)" stroke-opacity="0.5" stroke-width="1.25"/>
+        </svg>
+      </div>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-tr="act_section_badge">What we do</span>
+          <h2 class="section-title text-serif" data-tr="act_section_title">Engaged in building vibrant local communities.</h2>
+          <p class="section-subtitle" data-tr="act_section_subtitle">We work together with neighbors, friends, and families to create welcoming spaces for spiritual growth and community service.</p>
+        </div>
+
+        <div class="activities-grid">
+          <!-- Activity 1 -->
+          <div class="activity-card scroll-reveal">
+            <div class="act-badge green" data-tr="act_badge_1">Kids (Ages 5-10)</div>
+            <div class="act-content">
+              <h3 class="act-title text-serif" data-tr="act_title_1">Children's Classes</h3>
+              <p class="act-desc" data-tr="act_desc_1">Fun and creative classes focused on developing spiritual virtues like kindness, sharing, and honesty. Children learn through stories, cooperative games, songs, and arts.</p>
+              <div class="act-details-expanded" data-tr="act_details_1">
+                <p>Classes help children understand their nobility and build moral strength. In the Canton of Zug, kids from all backgrounds join these classes, fostering early habits of mutual respect.</p>
+              </div>
+              <button class="btn btn-text act-expand-btn" data-tr="btn_read_more">Read more ▾</button>
+            </div>
+          </div>
+
+          <!-- Activity 2 -->
+          <div class="activity-card scroll-reveal">
+            <div class="act-badge purple" data-tr="act_badge_2">Youth (Ages 11-15)</div>
+            <div class="act-content">
+              <h3 class="act-title text-serif" data-tr="act_title_2">Junior Youth Groups</h3>
+              <p class="act-desc" data-tr="act_desc_2">A space for adolescents to hang out, discuss meaningful topics (like media, peer pressure, and justice), develop their skills, and design local community service projects.</p>
+              <div class="act-details-expanded" data-tr="act_details_2">
+                <p>The Junior Youth Spiritual Empowerment Program supports youth during a crucial stage of growth. They learn to analyze their environment and apply spiritual principles to solve real-world problems.</p>
+              </div>
+              <button class="btn btn-text act-expand-btn" data-tr="btn_read_more">Read more ▾</button>
+            </div>
+          </div>
+
+          <!-- Activity 3 -->
+          <div class="activity-card scroll-reveal">
+            <div class="act-badge orange" data-tr="act_badge_3">Adults & Families</div>
+            <div class="act-content">
+              <h3 class="act-title text-serif" data-tr="act_title_3">Devotional Gatherings</h3>
+              <p class="act-desc" data-tr="act_desc_3">Simple gatherings of friends and neighbors to share prayers, read uplifting passages, and enjoy spiritual music. It's a peaceful space to reflect and bind hearts together.</p>
+              <div class="act-details-expanded" data-tr="act_details_3">
+                <p>Devotionals have no formal ritual. Guests are welcome to share prayers from their own faith, scriptures, or simply enjoy the peaceful environment, reinforcing spiritual ties.</p>
+              </div>
+              <button class="btn btn-text act-expand-btn" data-tr="btn_read_more">Read more ▾</button>
+            </div>
+          </div>
+
+          <!-- Activity 4 -->
+          <div class="activity-card scroll-reveal">
+            <div class="act-badge teal" data-tr="act_badge_4">Youth & Adults</div>
+            <div class="act-content">
+              <h3 class="act-title text-serif" data-tr="act_title_4">Study Circles</h3>
+              <p class="act-desc" data-tr="act_desc_4">Small group circles studying spiritual writings and translating themes directly into action. Participants learn how to lead children's classes or organize service events.</p>
+              <div class="act-details-expanded" data-tr="act_details_4">
+                <p>Study circles combine study and active service. Using curricula from the Ruhi Institute, they build capacity in participants to serve their local communities effectively.</p>
+              </div>
+              <button class="btn btn-text act-expand-btn" data-tr="btn_read_more">Read more ▾</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Elegant Gold Floral Vine Divider -->
+    <div class="floral-divider scroll-reveal">
+      <svg viewBox="0 0 100 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10,5 Q30,2 50,5 T90,5" stroke="var(--color-primary)" stroke-opacity="0.5" stroke-width="1.5"/>
+        <path d="M50,5 C47,2 44,2 42,5 C44,8 47,8 50,5" stroke="var(--color-secondary)" stroke-opacity="0.5" stroke-width="1.25"/>
+        <path d="M50,5 C53,2 56,2 58,5 C56,8 53,8 50,5" stroke="var(--color-secondary)" stroke-opacity="0.5" stroke-width="1.25"/>
+      </svg>
+    </div>
+
+    <!-- Virtues Card Generator Widget -->
+    <section class="virtues-section" id="virtues">
+      <!-- Subtle Background Floral Mandala for Virtues Section -->
+      <div class="floral-svg svg-virtues-tl">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="40" stroke="var(--color-primary)" stroke-opacity="0.6" stroke-width="1.5"/>
+          <path d="M50,10 L50,90 M10,50 L90,50" stroke="var(--color-secondary)" stroke-opacity="0.5" stroke-width="1.25"/>
+          <path d="M22,22 L78,78 M22,78 L78,22" stroke="var(--color-secondary)" stroke-opacity="0.5" stroke-width="1.25"/>
+        </svg>
+      </div>
+      <div class="container virtues-grid-layout">
+        <div class="virtues-content">
+          <span class="section-badge" data-tr="virtue_badge">Interactive Widget</span>
+          <h2 class="section-title text-serif" data-tr="virtue_title">Discover your virtue of the day.</h2>
+          <p class="section-subtitle" data-tr="virtue_subtitle">Character education is central to the Bahá'í community. Our virtues card generator is a fun way for kids, parents, and teachers to reflect on positive qualities together.</p>
+          <div class="virtues-card-tip">
+            <strong data-tr="virtue_tip_label">Family Idea:</strong> <span data-tr="virtue_tip_text">Click to reveal a virtue and discuss how you can practice it together at dinner or school today!</span>
+          </div>
+          <button id="generate-virtue-btn" class="btn btn-primary btn-lg" data-tr="virtue_btn">Reveal a Virtue 🌟</button>
+        </div>
+
+        <div class="virtues-card-wrapper">
+          <!-- Generated Card -->
+          <div class="virtue-card-container glass" id="virtue-display-card">
+            <div class="vcard-header">
+              <span class="vcard-tag" data-tr="virtue_card_header">Daily Virtue</span>
+              <span class="vcard-icon" id="virtue-icon">☀️</span>
+            </div>
+            
+            <div class="vcard-body">
+              <h3 class="virtue-name text-serif" id="virtue-name" data-tr="virtue_card_title_init">Click the Button!</h3>
+              <p class="virtue-desc" id="virtue-desc" data-tr="virtue_card_desc_init">Every day is a chance to cultivate positive qualities. Click "Reveal a Virtue" to explore how to practice kindness, patience, unity, or justice today.</p>
+              
+              <div class="virtue-quote-box" id="virtue-quote-container">
+                <p class="virtue-quote" id="virtue-quote" data-tr="virtue_card_quote_init">"True peace can only come when we learn to practice love and justice to all."</p>
+                <span class="virtue-quote-author" id="virtue-quote-author" data-tr="virtue_card_author_init">— Bahá'í Writings</span>
+              </div>
+
+              <div class="virtue-prompt-box">
+                <span class="prompt-title" data-tr="virtue_prompt_title">Reflection Question</span>
+                <p class="virtue-prompt" id="virtue-prompt" data-tr="virtue_prompt_init">What quality would you like to focus on today?</p>
+              </div>
+            </div>
+
+            <div class="vcard-footer">
+              <span data-tr="virtue_footer_1">Bahá'í Family Virtues Project</span>
+              <span data-tr="virtue_footer_2">Building character, together</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Elegant Gold Floral Vine Divider -->
+    <div class="floral-divider scroll-reveal">
+      <svg viewBox="0 0 100 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10,5 Q30,2 50,5 T90,5" stroke="var(--color-primary)" stroke-opacity="0.5" stroke-width="1.5"/>
+        <path d="M50,5 C47,2 44,2 42,5 C44,8 47,8 50,5" stroke="var(--color-secondary)" stroke-opacity="0.5" stroke-width="1.25"/>
+        <path d="M50,5 C53,2 56,2 58,5 C56,8 53,8 50,5" stroke="var(--color-secondary)" stroke-opacity="0.5" stroke-width="1.25"/>
+      </svg>
+    </div>
+
+    <!-- History Timeline Section -->
+    <section class="history-section" id="history">
+      <!-- Subtle Background Floral Stem for History Section -->
+      <div class="floral-svg svg-history-tr">
+        <svg viewBox="0 0 100 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50,190 Q50,100 50,10" stroke="var(--color-primary)" stroke-opacity="0.6" stroke-width="1.5"/>
+          <path d="M50,160 Q70,150 65,135 Q55,145 50,160" stroke="var(--color-secondary)" stroke-opacity="0.5" stroke-width="1.25"/>
+          <path d="M50,130 Q30,120 35,105 Q45,115 50,130" stroke="var(--color-secondary)" stroke-opacity="0.5" stroke-width="1.25"/>
+          <path d="M50,100 Q70,90 65,75 Q55,85 50,100" stroke="var(--color-secondary)" stroke-opacity="0.5" stroke-width="1.25"/>
+          <path d="M50,70 Q30,60 35,45 Q45,55 50,70" stroke="var(--color-secondary)" stroke-opacity="0.5" stroke-width="1.25"/>
+          <path d="M50,40 Q70,30 65,15 Q55,25 50,40" stroke="var(--color-secondary)" stroke-opacity="0.5" stroke-width="1.25"/>
+        </svg>
+      </div>
+      <div class="container">
+        <div class="section-header align-center">
+          <span class="section-badge" data-tr="history_badge">Our Journey</span>
+          <h2 class="section-title text-serif" data-tr="history_title">Bahá'í Faith in Switzerland & Zug</h2>
+          <p class="section-subtitle" data-tr="history_subtitle">The Bahá'í Faith has been present in Switzerland since the beginning of the 20th century. Click the milestones below to discover our history and local roots in Zug.</p>
+        </div>
+
+        <!-- Timeline Wrapper -->
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+          
+          <!-- Milestone 1 -->
+          <div class="timeline-item scroll-reveal">
+            <div class="timeline-badge">1903</div>
+            <div class="timeline-panel glass">
+              <h3 class="timeline-title text-serif" data-tr="milestone_title_1">First Swiss Bahá'ís</h3>
+              <p class="timeline-desc-short" data-tr="milestone_desc_short_1">The initial presence of the Faith begins as early Swiss thinkers learn about the teachings of unity and peace.</p>
+              <div class="timeline-expanded-content" data-tr="milestone_details_1">
+                <p>The teachings of the Bahá'í Faith arrived in Switzerland at the dawn of the 20th century, inspiring local searchers who sought international peace and spiritual renewal. Notable early figures established bridges with local associations in Zurich, Bern, and central Switzerland.</p>
+              </div>
+              <button class="btn btn-text timeline-toggle-btn" data-tr="btn_history_read_more">Read full history ▾</button>
+            </div>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="timeline-item scroll-reveal">
+            <div class="timeline-badge">1911</div>
+            <div class="timeline-panel glass">
+              <h3 class="timeline-title text-serif" data-tr="milestone_title_2">'Abdu'l-Bahá's Swiss Visit</h3>
+              <p class="timeline-desc-short" data-tr="milestone_desc_short_2">'Abdu'l-Bahá, the son of the Faith's founder, visits Switzerland to deliver public lectures on social progress.</p>
+              <div class="timeline-expanded-content" data-tr="milestone_details_2">
+                <p>In September 1911, 'Abdu'l-Bahá visited Geneva and Thonon-les-Bains. He spoke passionately to international groups and peace organizations, emphasizing that the oneness of humanity was the key requirement for world peace.</p>
+              </div>
+              <button class="btn btn-text timeline-toggle-btn" data-tr="btn_history_read_more">Read full history ▾</button>
+            </div>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div class="timeline-item scroll-reveal">
+            <div class="timeline-badge">1953</div>
+            <div class="timeline-panel glass">
+              <h3 class="timeline-title text-serif" data-tr="milestone_title_3">National Assembly Formed</h3>
+              <p class="timeline-desc-short" data-tr="milestone_desc_short_3">The election of the first National Spiritual Assembly coordinates activities across cantons, supporting local groups.</p>
+              <div class="timeline-expanded-content" data-tr="milestone_details_3">
+                <p>With local communities growing in Basel, Bern, Geneva, Zurich, and Lausanne, the first National Spiritual Assembly of the Bahá'ís of Switzerland was elected in 1953, establishing a formal support structure for local initiatives, including those in Central Switzerland.</p>
+              </div>
+              <button class="btn btn-text timeline-toggle-btn" data-tr="btn_history_read_more">Read full history ▾</button>
+            </div>
+          </div>
+
+          <!-- Milestone 4 -->
+          <div class="timeline-item scroll-reveal">
+            <div class="timeline-badge">Today</div>
+            <div class="timeline-panel glass">
+              <h3 class="timeline-title text-serif" data-tr="milestone_title_4">Zug Community Activities</h3>
+              <p class="timeline-desc-short" data-tr="milestone_desc_short_4">Active local groups hosting activities for all ages, contributing to character education and service in Canton Zug.</p>
+              <div class="timeline-expanded-content" data-tr="milestone_details_4">
+                <p>Today, the Zug community consists of local Bahá'ís and friends from diverse national origins, actively engaged in building peaceful neighborhoods, hosting moral classes for kids in Cham, Baar, and Zug, and organising community devotionals.</p>
+              </div>
+              <button class="btn btn-text timeline-toggle-btn" data-tr="btn_history_read_more">Read full history ▾</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section class="calendar-section" id="calendar">
+      <!-- Subtle Background Floral Mandala for Calendar Section -->
+      <div class="floral-svg svg-calendar-br">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" stroke="var(--color-primary)" stroke-opacity="0.6" stroke-width="1.5"/>
+          <path d="M50,15 C60,35 90,50 50,85 C10,50 40,35 50,15 Z" stroke="var(--color-primary)" stroke-opacity="0.7" stroke-width="1.5"/>
+          <circle cx="50" cy="50" r="5" fill="var(--color-secondary)" fill-opacity="0.25"/>
+        </svg>
+      </div>
+
+      <div class="container">
+        <div class="section-header align-center">
+          <span class="section-badge" data-tr="calendar_badge">Events Schedule</span>
+          <h2 class="section-title text-serif"><span data-tr="calendar_title">Zug Community Calendar</span> <span id="admin-cal-badge" class="admin-badge-cal hidden">Admin Mode Active 🛠️</span></h2>
+          <p class="section-subtitle" data-tr="calendar_subtitle">Discover and join upcoming events, devotionals, and classes happening in the Zug area. Select an event to view details and location.</p>
+        </div>
+
+        <div class="calendar-wrapper glass scroll-reveal">
+          <!-- Calendar Header -->
+          <div class="calendar-header-panel">
+            <div class="calendar-controls">
+              <button id="cal-prev-month" class="cal-btn" aria-label="Previous Month">◂</button>
+              <h3 id="cal-month-year" class="text-serif">July 2026</h3>
+              <button id="cal-next-month" class="cal-btn" aria-label="Next Month">▸</button>
+            </div>
+            <div class="admin-controls-wrapper">
+              <button id="admin-add-event-btn" class="btn btn-secondary btn-admin-action hidden" data-tr="calendar_add_btn">+ Add Event</button>
+            </div>
+          </div>
+
+          <!-- Calendar Grid -->
+          <div class="calendar-grid-container">
+            <!-- Day labels -->
+            <div class="calendar-day-labels">
+              <div data-tr="weekday_mon">Mon</div>
+              <div data-tr="weekday_tue">Tue</div>
+              <div data-tr="weekday_wed">Wed</div>
+              <div data-tr="weekday_thu">Thu</div>
+              <div data-tr="weekday_fri">Fri</div>
+              <div data-tr="weekday_sat">Sat</div>
+              <div data-tr="weekday_sun">Sun</div>
+            </div>
+            <!-- Days grid (populated via JS) -->
+            <div class="calendar-days-grid" id="calendar-days">
+              <!-- JS will inject days here -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Upcoming Events list for Mobile -->
+        <div class="upcoming-events-list-wrapper scroll-reveal">
+          <h3 class="text-serif upcoming-title" data-tr="upcoming_events_title">Upcoming Events in Zug</h3>
+          <div id="upcoming-events-list" class="upcoming-events-list">
+            <!-- JS will inject upcoming events list here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-container">
+        <div class="contact-card glass">
+          <div class="contact-grid">
+            <div class="contact-info">
+              <h2 class="contact-title text-serif" data-tr="contact_title">Connect with us.</h2>
+              <p class="contact-desc" data-tr="contact_desc">Our neighborhood activities are open to families, kids, and adults of all backgrounds and paths. Let us know if you have questions or want to join an event!</p>
+              
+              <!-- Contact details block -->
+              <div class="placeholder-notice">
+                <h4 data-tr="contact_notice_title">Contact Details Update</h4>
+                <p data-tr="contact_notice_desc">Our Swiss-wide local directory is currently being compiled. If you want to connect with a local assembly in your area, please use the contact form or email our national office:</p>
+                <div class="office-email">
+                  <span data-tr="contact_office_label">National Office Email:</span>
+                  <a href="mailto:info@bahai.ch">info@bahai.ch</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Simple Inquiry Form -->
+            <div class="contact-form-wrapper" id="form-container">
+              <form id="bahai-contact-form" class="contact-form" novalidate>
+                <div class="input-field">
+                  <input type="text" id="c-name" name="name" required placeholder=" ">
+                  <label for="c-name" data-tr="form_name_label">Your Name</label>
+                  <span class="error-msg" data-tr="form_error_name">Please enter your name.</span>
+                </div>
+
+                <div class="input-field">
+                  <input type="email" id="c-email" name="email" required placeholder=" ">
+                  <label for="c-email" data-tr="form_email_label">Email Address</label>
+                  <span class="error-msg" data-tr="form_error_email">Please enter a valid email address.</span>
+                </div>
+
+                <div class="input-field">
+                  <input type="text" id="c-city" name="city" required placeholder=" ">
+                  <label for="c-city" data-tr="form_city_label">City / Canton</label>
+                  <span class="error-msg" data-tr="form_error_city">Please enter your city or canton.</span>
+                </div>
+
+                <div class="input-field select-field">
+                  <select id="c-topic" name="topic" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="children" data-tr="form_topic_1">Children's Classes</option>
+                    <option value="youth" data-tr="form_topic_2">Junior Youth Groups</option>
+                    <option value="devotionals" data-tr="form_topic_3">Devotional Gatherings</option>
+                    <option value="general" data-tr="form_topic_4">General Inquiry</option>
+                  </select>
+                  <label for="c-topic" class="select-label" data-tr="form_topic_label">I'm interested in...</label>
+                  <span class="error-msg" data-tr="form_error_topic">Please select an interest.</span>
+                </div>
+
+                <div class="input-field text-area-field">
+                  <textarea id="c-message" name="message" required placeholder=" " rows="4"></textarea>
+                  <label for="c-message" data-tr="form_message_label">Write your message here</label>
+                  <span class="error-msg" data-tr="form_error_message">Please type your message.</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-submit" id="submit-btn">
+                  <span class="btn-text" data-tr="form_submit_btn">Send Message</span>
+                  <span class="btn-spinner hidden"></span>
+                </button>
+              </form>
+
+              <!-- Success Card -->
+              <div class="form-success-card hidden" id="form-success">
+                <div class="success-icon">🕊️</div>
+                <h3 class="success-title text-serif" data-tr="form_success_title">Message Received</h3>
+                <p class="success-desc" data-tr="form_success_desc">Thank you for reaching out to the Bahá'í community. We will connect you with a coordinator in your area and get back to you soon.</p>
+                <button class="btn btn-secondary" id="form-reset-btn" data-tr="form_success_reset_btn">Send Another Message</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-symbol">🕊️</span>
+          <span class="logo-text" data-tr="logo_text">BAHÁ'ÍS OF ZUG</span>
+        </a>
+        <p class="footer-desc" data-tr="footer_brand_desc">Inspired by the teachings of Bahá'u'lláh to establish peace, eliminate prejudice, and build cooperative communities in Canton Zug.</p>
+      </div>
+
+      <div class="footer-links-group">
+        <div class="footer-links-col">
+          <h4 class="f-col-title" data-tr="footer_col_1_title">Explore</h4>
+          <a href="#beliefs" class="f-link" data-tr="nav_beliefs">Our Beliefs</a>
+          <a href="#activities" class="f-link" data-tr="nav_activities">Local Activities</a>
+          <a href="#calendar" class="f-link" data-tr="nav_calendar">Zug Calendar</a>
+          <a href="#virtues" class="f-link" data-tr="nav_virtues">Virtues Card</a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="f-col-title" data-tr="footer_col_2_title">Resources</h4>
+          <a href="https://bahai.org" target="_blank" class="f-link" data-tr="footer_link_intl">International Website</a>
+          <a href="https://bahai.ch" target="_blank" class="f-link" data-tr="footer_link_nat">National Switzerland Site</a>
+          <a href="#contact" class="f-link" data-tr="nav_contact">Contact Us</a>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="f-col-title" data-tr="footer_col_3_title">Connect</h4>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/bahai.switzerland.7" target="_blank" aria-label="Facebook">FB</a>
+            <a href="https://x.com/Bahai_CH" target="_blank" aria-label="X (Twitter)">X</a>
+            <a href="https://www.instagram.com/bahai_switzerland/" target="_blank" aria-label="Instagram">IG</a>
+            <a href="https://ch.linkedin.com/company/bah%C3%A1%E2%80%99%C3%AD-switzerland" target="_blank" aria-label="LinkedIn">LN</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p>&copy; 2026 <span data-tr="footer_copy">Bahá'ís of Zug. Inspired by building unity. All rights reserved.</span></p>
+        <p>
+          <span class="footer-dot-sep" data-tr="footer_portal_desc">Official Canton Zug Portal.</span>
+          <a href="#" id="admin-portal-link" class="f-link admin-portal-link" data-tr="admin_portal_link">Admin Portal 🔒</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+     Modal Panels & Admin Editors
+     ========================================================================== -->
+  
+  <!-- Event Details Modal -->
+  <div id="event-details-modal" class="modal-overlay hidden">
+    <div class="modal-card glass scale-up">
+      <button class="modal-close-btn" id="close-details-btn">&times;</button>
+      <div class="modal-header">
+        <span class="event-category-badge" id="event-detail-category">Devotional</span>
+        <h3 class="event-detail-title text-serif" id="event-detail-title">Event Title</h3>
+      </div>
+      <div class="modal-body">
+        <div class="detail-time-row">
+          <span class="detail-icon">📅</span>
+          <span id="event-detail-datetime">Monday, July 15, 2026 - 19:30</span>
+        </div>
+        <div class="detail-desc-row">
+          <p id="event-detail-desc">Event description goes here. Learn more about local service and study.</p>
+        </div>
+        <div class="detail-location-row">
+          <span class="detail-icon">📍</span>
+          <div>
+            <strong id="event-detail-location-name">Community Center, Zug</strong>
+            <!-- Google Maps link container -->
+            <div id="maps-link-container" class="maps-link-container">
+              <!-- JS will inject link here -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer admin-event-actions hidden" id="admin-event-actions">
+        <button id="admin-edit-event-btn" class="btn btn-secondary" data-tr="admin_btn_edit">Edit Event</button>
+        <button id="admin-delete-event-btn" class="btn btn-secondary btn-danger" data-tr="admin_btn_delete">Delete Event</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Login Modal -->
+  <div id="login-modal" class="modal-overlay hidden">
+    <div class="modal-card glass scale-up">
+      <button class="modal-close-btn" id="close-login-btn">&times;</button>
+      <h3 class="modal-title text-serif" data-tr="login_title">Admin Portal Login</h3>
+      <p class="modal-subtitle" data-tr="login_subtitle">Authorized access for Zug community coordinators.</p>
+      
+      <form id="admin-login-form" class="modal-form" novalidate>
+        <div class="input-field">
+          <input type="text" id="login-username" required placeholder=" ">
+          <label for="login-username" data-tr="login_username_label">Username</label>
+          <span class="error-msg" data-tr="login_error_user">Please enter username.</span>
+        </div>
+        <div class="input-field">
+          <input type="password" id="login-password" required placeholder=" ">
+          <label for="login-password" data-tr="login_password_label">Password</label>
+          <span class="error-msg" data-tr="login_error_pass">Please enter password.</span>
+        </div>
+        <div class="login-feedback error hidden" id="login-feedback" data-tr="login_feedback_error">Invalid username or password.</div>
+        <button type="submit" class="btn btn-primary btn-block" data-tr="login_submit">Sign In</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Event Editor Form Modal -->
+  <div id="event-editor-modal" class="modal-overlay hidden">
+    <div class="modal-card glass scale-up editor-modal-card">
+      <button class="modal-close-btn" id="close-editor-btn">&times;</button>
+      <h3 class="modal-title text-serif" id="editor-modal-title" data-tr="editor_title_add">Add Event</h3>
+      
+      <form id="event-editor-form" class="modal-form" novalidate>
+        <input type="hidden" id="edit-event-id">
+        <div class="form-row-2">
+          <div class="input-field">
+            <input type="text" id="event-title" required placeholder=" ">
+            <label for="event-title" data-tr="editor_label_title">Event Title</label>
+            <span class="error-msg" data-tr="editor_error_title">Please enter a title.</span>
+          </div>
+          <div class="input-field select-field">
+            <select id="event-category" required>
+              <option value="children" data-tr="form_topic_1">Children's Class</option>
+              <option value="youth" data-tr="form_topic_2">Junior Youth Group</option>
+              <option value="devotionals" selected data-tr="form_topic_3">Devotional Gathering</option>
+              <option value="study" data-tr="form_topic_4">Study Circle</option>
+            </select>
+            <label for="event-category" class="select-label" data-tr="editor_label_category">Category</label>
+          </div>
+        </div>
+
+        <div class="form-row-2">
+          <div class="input-field">
+            <input type="date" id="event-date" required placeholder=" ">
+            <label for="event-date" class="date-label" data-tr="editor_label_date">Date</label>
+            <span class="error-msg" data-tr="editor_error_date">Select a valid date.</span>
+          </div>
+          <div class="input-field">
+            <input type="time" id="event-time" required placeholder=" ">
+            <label for="event-time" class="time-label" data-tr="editor_label_time">Time</label>
+            <span class="error-msg" data-tr="editor_error_time">Select time.</span>
+          </div>
+        </div>
+
+        <div class="input-field text-area-field">
+          <textarea id="event-description" required placeholder=" " rows="3"></textarea>
+          <label for="event-description" data-tr="editor_label_desc">Event Description</label>
+          <span class="error-msg" data-tr="editor_error_desc">Please enter a description.</span>
+        </div>
+
+        <div class="form-row-2">
+          <div class="input-field">
+            <input type="text" id="event-location" required placeholder=" ">
+            <label for="event-location" data-tr="editor_label_loc">Location Name</label>
+            <span class="error-msg" data-tr="editor_error_loc">Please enter a location.</span>
+          </div>
+          <div class="input-field">
+            <input type="url" id="event-maps-link" placeholder=" ">
+            <label for="event-maps-link" data-tr="editor_label_maps">Google Maps URL</label>
+            <span class="error-msg" data-tr="editor_error_maps">Please enter a valid URL.</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" id="editor-save-btn" data-tr="editor_submit">Save Event</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- App Javascript -->
+  <script src="app.js"></script>
+</body>
+</html>
